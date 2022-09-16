@@ -1,14 +1,14 @@
 version: 0.2
 phases:
   pre_build:
-    comands:
+    commands:
       - echo "Pre Build"
   build:
-    comands:
+    commands:
       - echo "Building"
       - mvn clean compile war:war
   post_build:
-    comands:
+    commands:
       - echo "Movendo Arquivos"
       - mv target/*.war ./ROOT.war
 artifacts:
