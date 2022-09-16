@@ -9,5 +9,4 @@ class AbctechserviceapiApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }

@@ -1,0 +1,25 @@
+package br.com.abctechservice.abctechserviceapi.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@Entity
+@Data
+@Table(name = "assistences")
+@AllArgsConstructor
+@NoArgsConstructor
+public class Assistance {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "name", nullable = false, length = 100)
+    private String name;
+
+    @Column(name = "description", nullable = false, length = 300)
+    private String description;
+}
