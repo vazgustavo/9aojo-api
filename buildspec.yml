@@ -5,6 +5,10 @@ phases:
       - echo "Pre Build"
   build:
     comands:
+      - echo "Building"
+      - mvn clean compile war:war
+  post_build:
+    comands:
       - echo "Movendo Arquivos"
       - mv target/*.war ./ROOT.war
 artifacts:
