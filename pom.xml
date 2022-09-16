@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.abctechservice</groupId>
 	<artifactId>abctechserviceapi</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>abctechserviceapi</name>
 	<description>Micro Servico responsavel pelo backend da abctechservice</description>
@@ -54,8 +54,12 @@
 			<artifactId>spring-restdocs-mockmvc</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.10.1</version>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -97,5 +101,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
