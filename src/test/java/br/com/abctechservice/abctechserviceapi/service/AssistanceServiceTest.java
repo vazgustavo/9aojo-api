@@ -19,7 +19,6 @@ public class AssistanceServiceTest {
     public void init() {
         MockitoAnnotations.openMocks(this);
         assistanceService = new AssistanceServiceImpl(assistanceRepository);
-
     }
 
     @DisplayName("Listando Assistencias disponiveis: sucesso")
@@ -31,7 +30,6 @@ public class AssistanceServiceTest {
         when(assistanceRepository.findAll()).thenReturn(List.of(assistance1, assistance2));
 
         List<Assistance> values = assistanceService.getAssitanceList();
-
         Assertions.assertEquals(2, values.size());
         Assertions.assertSame(values.get(0), assistance1);
         Assertions.assertSame(values.get(1), assistance2);
@@ -44,6 +42,5 @@ public class AssistanceServiceTest {
 
         List<Assistance> values = assistanceService.getAssitanceList();
         Assertions.assertEquals(0, values.size());
-
     }
 }

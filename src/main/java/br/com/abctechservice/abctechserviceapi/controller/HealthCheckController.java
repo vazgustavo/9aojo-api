@@ -2,7 +2,6 @@ package br.com.abctechservice.abctechserviceapi.controller;
 
 import java.io.InputStream;
 import java.util.Properties;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

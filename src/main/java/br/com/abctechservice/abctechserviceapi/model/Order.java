@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -24,7 +23,7 @@ public class Order {
     private Long operatorId;
     
     @ManyToMany
-    private List<Assistance> services;
+    private List<Assistance> assists;
 
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "start_order_location_id", foreignKey = @ForeignKey(name = "FK_start_order_id"))
@@ -33,4 +32,12 @@ public class Order {
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "end_order_location_id", foreignKey = @ForeignKey(name = "FK_end_order_id"))
     private OrderLocation endOrderLocation;
+
+    public boolean hasMinAssists() {
+        return assists.size() > 0;
+    }
+
+    public boolean exceedsMaxAssists() {
+        return assists.size() > 15;
+    }
 }
