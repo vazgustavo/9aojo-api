@@ -1,7 +1,6 @@
 package br.com.abctechservice.abctechserviceapi.handler;
 
 import lombok.Data;
-
 import java.util.Date;
 
 @Data

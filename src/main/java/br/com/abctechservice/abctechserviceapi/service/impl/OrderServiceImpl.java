@@ -2,6 +2,7 @@ package br.com.abctechservice.abctechserviceapi.service.impl;
 
 import br.com.abctechservice.abctechserviceapi.handler.exception.MaxAssistsException;
 import br.com.abctechservice.abctechserviceapi.handler.exception.MinimumAssistRequiredException;
+import br.com.abctechservice.abctechserviceapi.handler.exception.OperatorNotFoundException;
 import br.com.abctechservice.abctechserviceapi.model.Assistance;
 import br.com.abctechservice.abctechserviceapi.model.Order;
 import br.com.abctechservice.abctechserviceapi.repository.AssistanceRepository;
@@ -27,7 +28,8 @@ public class OrderServiceImpl implements OrderService {
     public void saveOrder(Order order, List<Long> arrayAssists) throws Exception {
         ArrayList<Assistance> assistances = new ArrayList<>();
         arrayAssists.forEach(i -> {
-            Assistance assistance = assistanceRepository.findById(i).orElseThrow();
+            Assistance assistance = assistanceRepository.findById(i).orElseThrow(() ->
+                    new OperatorNotFoundException("Operator Not Found", "nao foi possivel buscar o operador"));
             assistances.add(assistance);
         });
 
@@ -44,6 +46,11 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<Order> listOrderByOperator(Long operatorId) {
-        return null;
+        List<Order> lista = orderRepository.findOperatorById(operatorId);
+        if(!lista.isEmpty()) {
+            return lista;
+        } else {
+            throw new OperatorNotFoundException("Operator Not Found", "nao foi possivel buscar o operador");
+        }
     }
 }
