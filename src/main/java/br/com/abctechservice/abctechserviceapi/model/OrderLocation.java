@@ -8,6 +8,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "orders_location")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -15,7 +16,7 @@ import java.util.Date;
 public class OrderLocation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id",nullable = false)
+    @Column(name = "id", nullable = false)
     private Long id;
 
     private Double latitude;

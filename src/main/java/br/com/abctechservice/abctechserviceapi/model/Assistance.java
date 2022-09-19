@@ -3,16 +3,14 @@ package br.com.abctechservice.abctechserviceapi.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name = "assistences")
+@Table(name = "assistances")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Assistance {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

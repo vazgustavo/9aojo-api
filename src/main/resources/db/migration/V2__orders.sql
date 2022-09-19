@@ -1,4 +1,4 @@
-create table order_location
+create table orders_location
 (
     id bigint auto_increment primary key,
     date datetime(6) null,
@@ -13,9 +13,9 @@ create table orders
     end_order_location_id bigint not null,
     start_order_location_id bigint not null,
     constraint FK_end_order_id
-        foreign key (end_order_location_id) references order_location (id),
+        foreign key (end_order_location_id) references orders_location (id),
     constraint FK_start_order_id
-        foreign key (start_order_location_id) references order_location (id)
+        foreign key (start_order_location_id) references orders_location (id)
 );
 
 create table orders_assists
