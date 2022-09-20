@@ -2,7 +2,6 @@ package br.com.abctechservice.abctechserviceapi.application;
 
 import br.com.abctechservice.abctechserviceapi.application.dto.OrderDTO;
 import br.com.abctechservice.abctechserviceapi.model.Order;
-
 import java.util.List;
 
 public interface OrderApplication {
