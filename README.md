@@ -4,6 +4,7 @@
 # GET:
 * http://abctechserviceapi-env-1.eba-whst6z3z.us-east-1.elasticbeanstalk.com/version
 * http://abctechserviceapi-env-1.eba-whst6z3z.us-east-1.elasticbeanstalk.com/order/operator/123123
+* http://abctechserviceapi-env-1.eba-whst6z3z.us-east-1.elasticbeanstalk.com/assistance
 
 # POST:
 * http://abctechserviceapi-env-1.eba-whst6z3z.us-east-1.elasticbeanstalk.com/order
