@@ -11,7 +11,7 @@
 ```
 {
     "operatorId": 111222,
-    "assists": [1,0],
+    "assists": [1,2],
     "start": {
         "latitude": -23.555420,
         "longitude": -46.601068,
