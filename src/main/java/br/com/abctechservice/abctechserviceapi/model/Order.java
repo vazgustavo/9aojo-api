@@ -19,7 +19,7 @@ public class Order {
     @Column(name = "id", nullable = false)
     private Long id;
     
-    @Column(name = "operador_id", nullable = false)
+    @Column(name = "operator_id", nullable = false)
     private Long operatorId;
     
     @ManyToMany

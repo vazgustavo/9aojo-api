@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface OrderRepository extends JpaRepository<Order,Long> {
-    List<Order> findOperatorById(Long operatorId);
+    List<Order> findByOperatorId(Long operatorId);
 }
