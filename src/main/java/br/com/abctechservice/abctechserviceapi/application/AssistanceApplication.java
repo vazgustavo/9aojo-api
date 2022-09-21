@@ -1,8 +1,8 @@
 package br.com.abctechservice.abctechserviceapi.application;
 
-import br.com.abctechservice.abctechserviceapi.application.dto.AssistDTO;
+import br.com.abctechservice.abctechserviceapi.model.Assistance;
 import java.util.List;
 
 public interface AssistanceApplication {
-    List<AssistDTO> getAssists();
+    List<Assistance> getAssists();
 }
