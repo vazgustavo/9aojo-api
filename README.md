@@ -29,4 +29,4 @@
 ## Para executar local, Environment variables on "application.yml":
 ```DB_HOSTNAME=localhost;DB_PORT=3306;DB_NAME=abctechsevicedb;DB_USERNAME=root;DB_PASSWORD=Fiap1234;```
 <p>após configurado e conectado executar o seguinte comando SQL</p>
-```create database if not exists abctechsevicedb;```
+```create database if not exists abctechsevicedb; ```
