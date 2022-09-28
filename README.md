@@ -24,10 +24,15 @@
 ``` 
 
 ## ----###SUPORTE PARA RODAR LOCAL###----
-## Command create and run Docker:
+
+<p>Command create and run Docker:</p>
+
 ```docker run --name mysql-dev -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Fiap1234 -d mysql:8.0-oracle```
-## Para executar local, Environment variables on "application.yml":
+
+<p>Para executar local, Environment variables on "application.yml":</p>
+
 ```DB_HOSTNAME=localhost;DB_PORT=3306;DB_NAME=abctechsevicedb;DB_USERNAME=root;DB_PASSWORD=Fiap1234;```
+
 <p>após configurado e conectado executar o seguinte comando SQL</p>
 
 ``` create database if not exists abctechsevicedb ```
